@@ -8,8 +8,7 @@ const IndexPage = () => {
 
   return (
     <Layout title="My context app">
-      {/* <p>Current theme: {themeContext.value}</p> */}
-      {/* <p>Person</p> */}
+      {/* <p>Current theme: {themeContext.value}</p>  */}
     </Layout>
   );
 };

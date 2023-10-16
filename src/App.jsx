@@ -13,11 +13,11 @@ function App() {
         <IndexPage />
       </ThemeProvider>
 
-      {/* <NamePrinterP name={name} />
-      <NamePrinterH1 name={name} />
-      <NameChanger name={lastname} onNameChange={setName} />
-      <NamePrinterP name={lastname} />
-      <NamePrinterH1 name={lastname} />
+      <NamePrinterP name={name} />
+
+      <NameChanger name={name} onNameChange={setName} />
+      {/* <NamePrinterP name={lastname} />
+
       <NameChanger name={lastname} onNameChange={setValue} /> */}
     </>
   );
@@ -27,32 +27,28 @@ function NamePrinterP(props) {
   return <p>{props.name}</p>;
 }
 
-function NamePrinterH1(props) {
-  return <h5>{props.name}</h5>;
-}
-
 function NameChanger(props) {
   const { onNameChange } = props;
   const [newName, setNewName] = useState(props.name);
-
+  // const [LastName, setlatname] = useState(props.lastname);
   function handleSubmit(e) {
     e.preventDefault();
     onNameChange(newName);
     setNewName("");
+    setlatname("");
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      <label>Name:</label>
       <input
         type="text"
         value={newName}
         onChange={(e) => setNewName(e.target.value)}
+        required
       />
-      <input
-        type="text"
-        value={newName}
-        onChange={(e) => setNewName(e.target.value)}
-      />
+      <label>ImageUrl</label>
+      <input type="url" onChange={(e) => setlatname(e.target.value)} required />
       <input type="submit" />
     </form>
   );
