@@ -20,15 +20,17 @@ const Nav = () => {
           <strong>Profile Card</strong>
         </li>
       </ul>
+
       <ul>
         <li>
           <ProfileCard />
         </li>
+
         <li>
           {themeContext.value === "light" ? (
-            <button onClick={() => handleClick("dark")}>🌙</button>
+            <button onClick={() => handleClick("dark")}>Dark</button>
           ) : (
-            <button onClick={() => handleClick("light")}>🌞</button>
+            <button onClick={() => handleClick("light")}>LIght</button>
           )}
         </li>
       </ul>

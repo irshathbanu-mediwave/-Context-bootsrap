@@ -21,7 +21,7 @@ const Layout = (props) => {
   return (
     <>
       <Nav />
-      <main className="container">{props.children}</main>
+      <main className="container-Main">{props.children}</main>
     </>
   );
 };
